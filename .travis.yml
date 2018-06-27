@@ -1,3 +1,7 @@
+language: node_js
+node_js:
+- '9.10.1'
+
 branches:
   only:
     - master
@@ -12,6 +16,7 @@ deploy:
   on:
     branch: master
   provider: firebase
+  skip-cleanup: true
   token:
     secure: CewmMckfeYmjGyaF3R8jA6C5TDuEJ+NNZDbrNpfrmvCDclTxVrSnmeX3l0Ty989CHESYLwVkNKacXCrJ7GtSQ761nVFuTDAokjUkJNrsh7IqC2pun7cdv95hJdlsY2r+mKzDjUr+1alntQJXHVL0YEpjiGz3iAhBTwB1IflS2jI51RK4m0Dia8JOpETFc75Bm79WZ3OKQ0dCrlO8HIDNxUkpPzM+IhuZcFNBlFEXWeCa/K+EQb3h4VE2eHn00EWffjJl2qM7R66yMPyyeY/wmEjj0PPJsiDNROg+yOIb49lMROg6KE8TnJdj/mLuIhOAbH4A9cPnDGuPEeNfByT/MyIYhxMDBIxUf+v5bnwiuwxs0SUxadfYpsuoLohWB4D0PPtsClFtHzZ5gtXYvEbA6Y3MAsBo+XsycwEpUS1IRD8OI6Gw28XgdzUW9KRtGZ1Bi07Ghk1O+Pd9A+ySNx+tDiOHKTthE/G+zJmQFL0dArA31uTUADVBaLRHcT1rShIhOf/QzUR1coRC/YWn0g2YbapcWN7q3dmsQLTcm6SwQWrhBhLy90tNvHEReacM9bz8Uv0hy/cB98hL01Is8T3ikpupCGFekwGbudS3JvOMbvj+OQsiayhftWIDV8D0hYi9kySvdQ7jzL93h5mh0pc/pJPklQHc/S4ugNqHpqOwyR8=
   project: "angular-portfolio-a0a79"
