@@ -15,7 +15,7 @@ export class MenuComponent implements OnInit {
         this.body = document.querySelector('body');
     }
 
-    private toggleClass(): void {
+    public toggleClass(): void {
         if (this.body.classList.contains('nav-active')) {
             this.body.classList.remove('nav-active')
         } else {
