@@ -1,5 +1,90 @@
-html,
-body {
-  background-color: #36393e;
-  font-family: 'Inconsolata', sans-serif;
+/*********************************************
+**************** VARIABLES *******************
+*********************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+$color1: #202126;
+$color2: #202126;
+$white: #fff;
+
+$background--color :#1e2023;
+$icon--color: #1e2023;
+$font--color: #ffffff;
+$font--color--active :#000000;
+$font--primary: 'Raleway', sans-serif;
+$transition--length: .8;
+
+/*********************************************
+**************** MEDIA SIZE ******************
+*********************************************/
+
+$S: 480px;
+$M: 768px;
+$L: 1170px;
+
+@mixin MQ( $canvas ) {
+	@if $canvas == S {
+		@media only screen and ( max-width: $S ) {
+			@content;
+		}
+	} @else if $canvas == M {
+		@media only screen and ( max-width: $M ) {
+			@content;
+		}
+	} @else if $canvas == L {
+		@media only screen and ( max-width: $L ) {
+			@content;
+		}
+	}
+}
+
+/*********************************************
+****************** OTHERS ********************
+*********************************************/
+
+body{
+    padding: 0;
+    margin: 0;
+	background-color: $color1;
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    &.nav-active{
+        $menu--items--count: 4;
+        .menu-icon{
+            &__line{
+                background-color: #000;
+                transform: translateX(0px) rotate(-45deg);
+            }
+            &__line-left{
+                transform: translateX(1px) rotate(45deg);
+            }
+            &__line-right{
+                transform: translateX(-2px) rotate(45deg);
+            }
+        }
+        .nav{
+            visibility:visible;
+            &:before,&:after{
+                transform: translateX(0%) translateY(0%);
+            }
+            &:after{
+                transition-delay: .1s;
+            }
+            &:before{
+                transition-delay: 0s;
+            }
+            &__list-item{
+                opacity: 1;
+                transform: translateX(0%);
+                transition: opacity .3s ease, transform .3s ease, color .3s ease;
+                @for $i from 0 through $menu--items--count {
+                    &:nth-child(#{$i}){
+                        transition-delay: $transition--length * $i / 8 + .5 + s;
+                    }
+                }
+            }
+        }
+    }
 }
