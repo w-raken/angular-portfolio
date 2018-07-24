@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-menu',
     templateUrl: './menu.component.html',
-    styleUrls: ['./menu.component.scss']
+    styleUrls: [ './menu.component.scss' ]
 })
 export class MenuComponent implements OnInit {
 
@@ -12,14 +12,14 @@ export class MenuComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { 
-        this.body = document.querySelector('body');
+        this.body = document.querySelector( 'body' );
     }
 
     public toggleClass(): void {
-        if (this.body.classList.contains('nav-active')) {
-            this.body.classList.remove('nav-active')
+        if ( this.body.classList.contains( 'nav-active' ) ) {
+            this.body.classList.remove( 'nav-active' )
         } else {
-            this.body.classList.add('nav-active');
+            this.body.classList.add( 'nav-active' );
         }
     }
 }
