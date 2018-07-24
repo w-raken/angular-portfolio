@@ -19,6 +19,6 @@ export class HomeComponent implements OnInit {
             delay: function(el, i) { return i * 0 },
             direction: 'alternate',
             loop: true
-        })
+        });
     }
 }
