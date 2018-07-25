@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     
     ngOnInit() {
         anime.timeline().add({
-            targets: '#lineDrawing .lines .linepath',
+            targets: '.lines .lines__group .lines__path',
             strokeDashoffset: [ anime.setDashoffset, 0 ],
             easing: 'easeInOutSine',
             duration: 3000,

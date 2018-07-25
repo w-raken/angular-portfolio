@@ -1,19 +1,12 @@
 @import "../../styles.scss";
 
-#lineDrawing {
+.lines {
     width: 350px;
     margin-left: 50%;
     transform: translateX(-50%);
 
-    .st0{
+    &__path {
         stroke:#fff;
-    }
-
-    p {
-        text-align: -webkit-center;
-        color: #b3b3b3;
-        font-family: "Raleway", sans-serif;
-        font-size: 30px;
     }
 }
 
@@ -153,4 +146,18 @@
         opacity: 1;
         color: #b3b3b3;
     }
+}
+
+@include MQ(L) {
+
+}
+
+@include MQ(M) {
+    .lines {
+        width: 200px;
+    }
+}
+
+@include MQ(S) {
+
 }
