@@ -1,16 +1,31 @@
-<div (click)="toggleClass()" class="menu-icon">
-    <span class="menu-icon__line menu-icon__line-left"></span>
-    <span class="menu-icon__line"></span>
-    <span class="menu-icon__line menu-icon__line-right"></span>
+<div class="menu">
+
+    <div *ngIf="urlPath !== '/'" class="menu__logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 612.5 591.06">
+            <title>Maxime Marquet Logo</title>
+            <g>
+                <g>
+                    <path d="M308.1,163.27,143.53,1l-.65,165.26-.22,57,0,6,0,0-.55,66.08.32.31L141.44,544H47.12V200.34l48.21,48.21.55-66.08L0,86.59V591.06H188.36l1-248.51,0,.06.26-66.38-.06-.06.63-163L308.33,229.67,423.82,114.18l-.35,93.32,47.29-46.64L471.37,0Zm258.21-30.56.06.06L317.56,378.14l-.06-.06L304.4,391l-67.82-67.83-.26,66.38,67.1,67.1L529.26,234.91l.26.25,35.86-35.37V544H469.29L470,359.14l-47.3,46.43L422,591.06H612.5V87.14Z"/>
+                </g>
+            </g>
+        </svg>
+    </div>
+    
+    <div (click)="toggleClass()" class="menu-icon">
+        <span class="menu-icon__line menu-icon__line-left"></span>
+        <span class="menu-icon__line"></span>
+        <span class="menu-icon__line menu-icon__line-right"></span>
+    </div>
+
 </div>
 
 <div class="nav">
     <div class="nav__content">
         <ul class="nav__list">
-            <li class="nav__list-item">Accueil</li>
-            <li class="nav__list-item">Cursus</li>
-            <li class="nav__list-item">Projets</li>
-            <li class="nav__list-item">Contact</li>
+            <li (click)="routingAnimation('home');" class="nav__list-item">Accueil</li>
+            <li (click)="routingAnimation('cursus');" class="nav__list-item">Cursus</li>
+            <li (click)="routingAnimation('project');" class="nav__list-item">Projets</li>
+            <li (click)="routingAnimation('contact');" class="nav__list-item">Contact</li>
         </ul>
     </div>
 </div>

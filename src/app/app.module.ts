@@ -7,6 +7,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
+import { CursusComponent } from './cursus/cursus.component';
 
 // Providers
 
@@ -21,7 +22,8 @@ import { routes } from './app.routes';
 	declarations: [
 		AppComponent,
 		HomeComponent,
-		MenuComponent
+		MenuComponent,
+		CursusComponent
 	],
 	imports: [
 		BrowserModule,
