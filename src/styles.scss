@@ -4,8 +4,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
-$gray--primary: #1c1d22;
-$gray--secondary: #b3b3b3;
+$color--primary: #202025;
+$color--secondary: #292b2e;
+$color--tiercary: #b3b3b3;
 $menu--color: #b3b3b3;
 $font--color: #b3b3b3;
 $font--raleway: 'Raleway', sans-serif;
@@ -93,10 +94,14 @@ table {
 ****************** OTHERS ********************
 *********************************************/
 
+html, body {
+    background-color: $color--primary;
+    min-height: 100vh;
+}
+
 body{
     padding: 0;
     margin: 0;
-	background-color: $gray--primary;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     
@@ -104,7 +109,7 @@ body{
         $menu--items--count: 4;
         .menu-icon{
             &__line{
-                background-color: $gray--secondary;
+                background-color: $color--secondary;
                 transform: translateX(0px) rotate(-45deg);
             }
             &__line-left{

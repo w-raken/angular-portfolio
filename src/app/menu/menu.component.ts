@@ -28,7 +28,7 @@ export class MenuComponent implements OnInit {
         let container = <HTMLElement>document.querySelector( '.app-container' );
         container.style.opacity = "0";
         this.toggleClass();
-        setTimeout(() => {
+        setTimeout( () => {
             if ( route === "home" ) {
                 this.router.navigate( ["/"] );
             } else {

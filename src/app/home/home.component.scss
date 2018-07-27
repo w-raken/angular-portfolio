@@ -129,22 +129,13 @@
 }
   
 @keyframes letterSlide {
-    60% {
-        transform: translate(20px, 0) scale(1);
-        color: #b3b3b3;
-    }
-    80% {
-        transform: translate(20px, 0) scale(1);
-        color: #b3b3b3;
-    }
-    99% {
-        transform: translate(0) scale(1.2);
-        color: #fff;
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
     }
     100% {
-        transform: translate(0) scale(1);
+        transform: translateY(0px);
         opacity: 1;
-        color: #b3b3b3;
     }
 }
 
