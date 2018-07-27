@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { CursusComponent } from './cursus/cursus.component';
+import { ProjectComponent } from './project/project.component';
+import { ContactComponent } from './contact/contact.component';
 
 // Providers
 
@@ -23,7 +25,9 @@ import { routes } from './app.routes';
 		AppComponent,
 		HomeComponent,
 		MenuComponent,
-		CursusComponent
+		CursusComponent,
+		ProjectComponent,
+		ContactComponent
 	],
 	imports: [
 		BrowserModule,

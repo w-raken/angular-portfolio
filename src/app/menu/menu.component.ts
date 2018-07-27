@@ -35,6 +35,6 @@ export class MenuComponent implements OnInit {
                 this.router.navigate( ["/" + route] );
             }
             container.style.opacity = "1";
-        }, 900);
+        }, 900);        
     }
 }
